@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div.container
+    #user
+    h1.text-center.login-title Welcom #{user.firstName} !
+
+  nav.navbar.navbar-light.bg-light(style="background-color: #e3f2fd;")
+    .container-fluid
+      .navbar-header
+        img.d-inline-block.align-top(src="/image/Movie-Inc2.png", alt="",width="50", heigt="50")
+        a.nav-brand(href="#") Movie Inc
+      ul.nav.navbar-nav.navbar-right
+        li.form#fav.form-inline
+          a#favbtn.btn.btn-outline-success(type="submit" name="fav") My Fav
+        li.form#signout.form-inline
+          a#signout.btn.btn-outline-success(href="/signout") Signout
+  
+  .jumbotron
+      form.form-inline.search-movie(role='form',method='post')
+        input#search-txt.form-control.input-lg.mr-sm-2( type="search",placeholder="Type Movie Name" aria-label="Search"  name='searchText' )
+        button#search-btn.btn.btn-lg.btn-outline-sucess.my-2.my-sm-0(type="submit" name="search") Search
+  .div#showTable

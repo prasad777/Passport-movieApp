@@ -1,0 +1,50 @@
+//- extends layout
+
+//- block content
+//-   nav.navbar.navbar-light.bg-light(style="background-color: #e3f2fd;")
+//-     .container-fluid
+//-       .navbar-header
+//-         img.d-inline-block.align-top(src="/image/Movie-Inc2.png", alt="",width="50", heigt="50")
+//-         a.nav-brand(href="#") Movie Inc
+//-       ul.nav.navbar-nav.navbar-right
+//-         form#login.form-inline(role='form' method='post', action='/movie/login')
+//-           input#loginName.form-control(name="loginName", type="text",placeholder='login name')
+//-           input#password.form-control(name="password",type="text",placeholder = 'password')
+//-           button.btn.btn-outline-success.navbar-btn(type="submit" name="login") Login
+  
+
+//-   .jumbotron
+//-       .div#showMsg
+//-       h2.sign-up Sign Up !
+//-       form#sign-up.sign-up(role='form')
+//-         .form-group
+//-           label(for='userName') User Name
+//-           input#userName.form-control(name='userName', type="text")
+//-         .form-group
+//-           label(for='loginName') Login Name
+//-           input#loginName.form-control(name='loginName', type="text")
+//-         .form-group
+//-           label(for='password') Password
+//-           input#password.form-control(name='password', type="text")
+//-         .form-group
+//-           label(for='emailId') Email 
+//-           input#emailId.form-control(name='emailId', type="text")
+//-         button#signup-submit.btn.btn-primary(type="submit" name='signup') Sign Up
+
+extends layout
+
+block content
+  div.container
+    h1.text-center.login-title Login to Movie Search App
+      div.account-wall
+        img(class='profile-img', src='./image/user.png')
+        form(class='form-signin', action='/login', method='POST')
+          input(type='text', name='username' class='form-control', placeholder='Username',required, autofocus)
+          input(type='password', name='password' class='form-control', placeholder='Password', required)
+          br
+          button(type='submit') Sign in
+          span.clearfix
+      a(href='/signup', class='text-center new-account') Create an account
+      #message
+      if message
+        h1.text-center.error-message #{message}
