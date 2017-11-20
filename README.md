@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Boilerplate for Movies App Assignment - 10 Movies to Watch Before I Die
 
 The folders and files you see in this repositories, is how it is expected to be in projects, which are submitted for Automated Evaluations
@@ -59,3 +60,6 @@ The folders and files you see in this repositories, is how it is expected to be 
 > - The code must not be plagiarised, the mentors will randomly pick the submissions and may ask you to explain the solution
 > - The code must be properly indented, code structure maintained as per the boilerplate and properly commented
 > - Follow through the problem statement and stories shared with you
+=======
+# Passport-movieApp
+>>>>>>> cf98b7bc5189f23dab7eff980aaa4cb99495f690
